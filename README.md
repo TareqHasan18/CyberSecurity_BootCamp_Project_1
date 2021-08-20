@@ -52,3 +52,28 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-1     |   Server       |      10.0.0.9(Private)      |     Linux             |
 | Web-2     |    Server      |      10.0.0.10(Private)      |      Linux            |
 | Web-3     |    Server      |      10.2.0.4(Private)      |        Linux          |
+
+
+### Access Policies
+
+The machines on the internal network are not exposed to the public Internet. 
+
+- Only the Jump-Box-Provisioner machine can accept connections from the Internet. 
+- Access to this machine is only allowed from the following IP addresses:
+    - _67.243.194.160 (LocalHost IP address)_
+
+Machines within the network can only be accessed by Jump-Box-Provisioner.
+    - Which machine did you allow to access your ELK VM? _
+        - Jump-Box-Provisoner
+    - What was its IP address?_
+        - 10.0.0.4 (Private)
+
+A summary of the access policies in place can be found in the table below.
+
+| Name     | Publicly Accessible | Allowed IP Addresses |
+|----------|---------------------|----------------------|
+| Jump Box | Yes              | 67.243.194.160   |
+|  Web-1*        |  No                   |  10.0.0.9                    |
+|   Web-2*       |   No                  |   10.0.0.10                   |
+|  Web-3(ELK )*  |NO                   |10.2.0.4|
+    - --All these VMs can only be accessed from the Jump-Box-Provissioner--
