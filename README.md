@@ -96,7 +96,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Web-3(ELK VM)](https://github.com/TareqHasan18/CyberSecurity_BootCamp_Project_1/blob/main/Screenshots/elk-VM%20Docker%20ps.png)
+[Web-3(ELK VM)](https://github.com/TareqHasan18/CyberSecurity_BootCamp_Project_1/blob/main/Screenshots/elk-VM%20Docker%20ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
