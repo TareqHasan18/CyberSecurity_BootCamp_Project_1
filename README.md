@@ -46,8 +46,9 @@ Load balancing ensures that the application will be highly functional, in additi
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-Name	Function	IP Address	Operating System
-Jump-Box-Provisioner	Gateway	10.0.0.4(Private)//40.87.111.46(Public)	Linux
-Web-3(ELK)-VM	Server	10.2.0.4(Private)//20.97.170.48(Public)	Linux
-Web-1	Server	10.0.0.9(Private)	Linux
-Web-2	Server	10.0.0.10(Private)	Linux
+| Name     | Function | IP Address | Operating System |
+|----------|----------|------------|------------------|
+| Jump Box Provisioner | Gateway  | 10.0.0.4(Private)//40.87.111.46(Public)   | Linux            |
+| Web-1     |   Server       |      10.0.0.9(Private)      |     Linux             |
+| Web-2     |    Server      |      10.0.0.10(Private)      |      Linux            |
+| Web-3     |    Server      |      10.2.0.4(Private)      |        Linux          |
