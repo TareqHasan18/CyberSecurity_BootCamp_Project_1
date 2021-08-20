@@ -124,7 +124,8 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:_
+SSH into the control node and follow the steps below:
+
 ---Filebeat---
   - Copy the filebeat-configuration.yml file to /etc/ansible/files.
   - Update the filebeat-configuration.yml file to include the ELK private IP in lines 1106 and 1806.
@@ -138,9 +139,16 @@ Clicked on the DEB tab under Getting Started and then clciked "Check Data" in st
   - Run the playbook, and navigate to http://[My.Elk.VM.PublicIP]:5601/app/kibana (ELK-VM public IP) Clicked Add Metric Data, Clicked Docker Metrics,
 Clicked on the DEB tab under Getting Started and then clciked "Check Data" in step 5 to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+Answer the following questions to fill in the blanks:
+- Which file is the playbook? 
+  - filebeat-playbook.yml, metricbeat-playbook.yml, elk-playbook.yml
+- Where do you copy it? 
+  - /etc/ansible for elk-playbook.yml and /etc/ansible/roles for filebeat-playbook.yml and metricbeat-playbook.yml
+- Which file do you update to make Ansible run the playbook on a specific machine? 
+  - /etc/ansible/hosts file (IP of the Virtual Machines).
+- How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+  - I have to specify two separate groups in the etc/ansible/hosts file. One of the groups will be webservers which has the IPs of the VMs that I will install Filebeat to. The other group is named elk which will have the IP of the VM I will install ELK to.
+- Which URL do you navigate to in order to check that the ELK server is running?
+  - http://[My.Elk.VM.PublicIP]:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
