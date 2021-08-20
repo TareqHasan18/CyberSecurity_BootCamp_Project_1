@@ -28,20 +28,20 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly functional, in addition to restricting high-trafficing to the network.
 
-- What aspect of security do load balancers protect? \
-  - It helps prevent overloading servers as well as optimizes productivity and maximizes uptime.\
+- What aspect of security do load balancers protect? 
+  - It helps prevent overloading servers as well as optimizes productivity and maximizes uptime.
   - It also adds resiliency by rerouting live traffic from one server to another causing it to eliminate single points of failure from attacks such as DDoS attack.
   
 - What is the advantage of a jump box?
-  Jump-box are highly secured computers that are never used for non-admin tasks. -Throughout the years, jump-box has improved into an even more     comprehensive/lock-down secure admin workstation to decrease the chances of hackers/malware infection.
+  - Jump-box are highly secured computers that are never used for non-admin tasks. -Throughout the years, jump-box has improved into an even more     comprehensive/lock-down secure admin workstation to decrease the chances of hackers/malware infection.
   
   Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
   
 - What does Filebeat watch for?
-  It monitors the log files/locations that you specify and forwards them to Elasticsearch/Logstash for indexing.
+  - It monitors the log files/locations that you specify and forwards them to Elasticsearch/Logstash for indexing.
   
 - What does Metricbeat record?
-  It records metrics/statistics data and transports them to the output that you specifics thru Elasticsearch/Logstash.
+  - It records metrics/statistics data and transports them to the output that you specifics thru Elasticsearch/Logstash.
   
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
