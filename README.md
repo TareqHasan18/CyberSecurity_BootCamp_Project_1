@@ -125,9 +125,18 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+---Filebeat---
+  - Copy the filebeat-configuration.yml file to /etc/ansible/files.
+  - Update the filebeat-configuration.yml file to include the ELK private IP in lines 1106 and 1806.
+  - Run the playbook, and navigate to http://[My.Elk.VM.PublicIP]:5601/app/kibana (ELK-VM public IP) Clicked Add Log Data, Clicked System Logs,
+Clicked on the DEB tab under Getting Started and then clciked "Check Data" in step 5 to check that the installation worked as expected.
+
+---Metricbeat---
+
+  - Copy the metricbeat-configuration.yml file to /etc/ansible/roles/files.
+  - Update the metricbeat-configuration.yml file to include the ELK private IP in lines 62 and 95.
+  - Run the playbook, and navigate to http://[My.Elk.VM.PublicIP]:5601/app/kibana (ELK-VM public IP) Clicked Add Metric Data, Clicked Docker Metrics,
+Clicked on the DEB tab under Getting Started and then clciked "Check Data" in step 5 to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
