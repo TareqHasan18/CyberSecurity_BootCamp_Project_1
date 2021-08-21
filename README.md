@@ -152,3 +152,55 @@ Answer the following questions to fill in the blanks:
   - http://[My.Elk.VM.PublicIP]:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+- ssh azadmin@40.87.111.46 //to connect with Jump-Box-Provisioner
+- sudo docker container ls -a //to check the container list
+- sudo docker start peaceful_robinson //to start container
+- sudo docker attach peaceful_robinson //to attach container
+- curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml //to download filebeat config file.
+
+-------Filebeat---------
+
+- To create the filebeat-configuration.yml file: nano filebeat-configuration.yml. For this, I used the filebeat configuration file template.
+
+- To create the playbook: nano filebeat-playbook.yml
+
+  ---
+- name: installing and launching filebeat
+  hosts: webservers
+  become: true
+  tasks:
+
+
+  - name: download filebeat deb
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
+ 
+  - name: install filebeat deb
+    command: sudo dpkg -i filebeat-7.4.0-amd64.deb
+
+  - name: drop in filebeat.yml 
+    copy:
+      src: /etc/ansible/files/filebeat-config.yml
+      dest: /etc/filebeat/filebeat.yml
+
+  - name: enable and configure system module
+    command: filebeat modules enable system
+
+  - name: setup filebeat
+    command: filebeat setup
+
+  - name: start filebeat service
+    command: service filebeat start
+
+  - name: enable service filebeat on boot
+    systemd:
+      name: filebeat
+      enabled: yes
+
+---
+-To run the playbook: ansible-playbook filebeat-playbook.yml
+
+* In order to run the playbook, user have to be in the directory the playbook is at, or give the path to it (ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
+
+***The same process for metricbeat as well.
+
