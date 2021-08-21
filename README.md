@@ -202,5 +202,5 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 * In order to run the playbook, user have to be in the directory the playbook is at, or give the path to it (ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
 
-***The same process for metricbeat as well.```
+<em>***The same process for metricbeat as well.<em>```
 
