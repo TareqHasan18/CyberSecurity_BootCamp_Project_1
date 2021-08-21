@@ -161,7 +161,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 ```-------Filebeat---------
 
-- To create the filebeat-configuration.yml file: nano filebeat-configuration.yml. For this, I used the filebeat configuration file template.
+- To create the filebeat-configuration.yml file: nano filebeat-config.yml. For this, I used the filebeat configuration file template.
 
 - To create the playbook: nano filebeat-playbook.yml
 
