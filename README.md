@@ -159,7 +159,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 - sudo docker attach peaceful_robinson //to attach container
 - curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml //to download filebeat config file.
 
-`-------Filebeat---------
+```-------Filebeat---------
 
 - To create the filebeat-configuration.yml file: nano filebeat-configuration.yml. For this, I used the filebeat configuration file template.
 
@@ -202,5 +202,5 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 * In order to run the playbook, user have to be in the directory the playbook is at, or give the path to it (ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
 
-***The same process for metricbeat as well.`
+***The same process for metricbeat as well.```
 
